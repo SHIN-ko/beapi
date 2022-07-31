@@ -11,7 +11,8 @@ public class BeAPISecurityConfig {
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return web -> web.ignoring()
-                .antMatchers("/resources/**");
+                .antMatchers("/resources/**")
+                .antMatchers("/h2-console/**");
     }
 
     @Bean
